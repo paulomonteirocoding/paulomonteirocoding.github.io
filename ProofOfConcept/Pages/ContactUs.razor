@@ -1,0 +1,9 @@
+﻿@page "/contactus"
+
+<h3>Contact Us</h3>
+    
+    <label for="name">First name:</label><br>
+    <input @bind-value="@name"  @bind-value:event="oninput" type="text" id="name" name="fname"><br><br><br>
+    <button class="btn btn-primary" @onclick="getFormData">Submit</button>
+
+<p>@capturedName</p>

@@ -1,7 +1,8 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<h1>This is a counting page with code behind approach</h1>
 
-Welcome to your new app.
+<p>The counter is currently at: @counter</p>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<button class="btn btn-primary" @onclick="increaseCounter">Click this to increase it</button>
+<button class="btn btn-primary" @onclick="decreaseCounter">Click this to decrease it</button>
