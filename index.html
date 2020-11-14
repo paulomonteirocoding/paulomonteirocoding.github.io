@@ -4,10 +4,20 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/6da2139e0d.js" crossorigin="anonymous"></script>
         <meta charset="utf-8">
+        <script src="javascript/scripts.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
     
-    <body>
+    <body onload="on()">
+
+        <div id="gdpr-acceptance">
+            <div>
+                <h1> Este site utiliza cookies! </h1> 
+                <p>Por favor leia a nossa politica de privacidade aqui antes de aceitar, ou pressione o botao abaixo caso a tenha lido e compreendido:</p>
+                <button onclick="off()"> Accept </button>
+            </div>
+        </div>
         <header>
             <div class="brand-section">
                 <h1 id="brand-name">
@@ -17,7 +27,7 @@
             </div>
             <nav >
                 <ul class="nav">
-                    <li class="nav-item">
+                    <li onclick=""class="nav-item">
                         home
                     </li>
                     <li class="nav-item">
