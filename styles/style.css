@@ -59,6 +59,10 @@ body{
 	justify-content: space-around;
 }
 
+.menu-item > a{
+    color: black;
+}
+
 .dropdown {
 	display: none;
 }
