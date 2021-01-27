@@ -1,0 +1,178 @@
+:root{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+}
+
+html{
+    scroll-behavior: smooth;
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+@media (max-width: 600px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 100vh;
+        max-height: fit-content;
+
+        header{
+            position:sticky;
+            top:0;
+            left: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            width:100vw;
+            min-height:max-content;
+            
+            background-color: white ;
+           
+
+            h1{
+                order:2;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin:1rem;
+            }
+
+            img{
+                order:1;
+                margin:1rem;
+            }
+
+            nav{
+                order:3;
+                margin:1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+
+                #menu{
+                    display: none;
+                }
+
+                #menu.visible{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+
+                    width: 100vw;
+                    height: 100vh;
+
+                    background: red;
+
+                    padding: 1rem;
+
+                    .menu-item{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-around;
+                        width: 100%;
+                        min-width: max-content ;
+                        list-style: none;
+                        height: 10vh;
+                        background: green;
+
+                        a{
+                            height: 100%;
+                            width: 100%;
+                            text-decoration: none;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+
+                            font-size: 9vh;
+                        }
+
+                        button{
+                            background: none;
+                            border: none;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            
+            }
+
+            #menu-toggle.visible{
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                display: block;
+            }
+        }
+
+        main{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            max-height: fit-content;
+            max-width: 100vw;
+
+            .cta-container{
+                min-width: fit-content;
+                min-height: 25vh;
+                max-height: fit-content;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+
+                margin: 1rem;
+
+                button{
+                    order: 2;
+                    margin:1rem;
+                    min-width: fit-content;
+                    --max-width: ;
+                }
+
+                .cta-description-container{
+                    order: 1;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (max-width:900px) and (min-width:600px) {
+    *{
+        background: red;
+    }
+        
+}
+
+@media (min-width: 901px) {
+    *{
+        background: green;
+    }
+}
