@@ -44,7 +44,7 @@ window.onload = function () {
     
         //create the menu
         for( i = 0; i < menu.length ; i++ ){
-            innerHTMLString += "<li class=\"menu-item\"><a href=\""+ menu[i].link +"\" target=\"" + menu[i].target +"\">" + menu[i].name + "</a></li>";
+            innerHTMLString += "<li class=\"menu-item\" onclick=\"toggleMenuVisibility\(\)\"><a href=\""+ menu[i].link +"\" target=\"" + menu[i].target +"\">" + menu[i].name + "</a></li>";
         }
     
         element.innerHTML = innerHTMLString;
@@ -52,15 +52,17 @@ window.onload = function () {
         //create the sections the menu points to
         
         for( i = 1; i < menu.length ; i++ ){
-            element = document.createElement('div');
+            element = document.createElement('section');
             element.setAttribute("id", menu[i].link.substring(1,menu[i].link.length));
             var mainElement = document.getElementsByTagName("main");
+            
 
             if(mainElement.length === 1){
                 mainElement[0].appendChild(element);
             
             }
             
+            document.getElementById(menu[i].link.substring(1,menu[i].link.length)).classList.add("page-section");
             
             element = document.getElementById(menu[i].link.substring(1,menu[i].link.length));
     

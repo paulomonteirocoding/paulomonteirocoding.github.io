@@ -22,6 +22,7 @@ html ::-webkit-scrollbar {
 
 @media (max-width: 600px) {
   body {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -41,10 +42,6 @@ html ::-webkit-scrollbar {
     max-height: fit-content;
   }
   body header {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -84,10 +81,7 @@ html ::-webkit-scrollbar {
             order: 1;
     margin: 1rem;
   }
-  body header nav {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+  body nav {
     margin: 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -101,11 +95,19 @@ html ::-webkit-scrollbar {
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1rem;
+    left: calc(100% - 10rem);
+    z-index: 1;
   }
-  body header nav #menu {
+  body nav #menu {
     display: none;
   }
-  body header nav #menu.visible {
+  body nav #menu.visible {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -127,7 +129,7 @@ html ::-webkit-scrollbar {
     background: red;
     padding: 1rem;
   }
-  body header nav #menu.visible .menu-item {
+  body nav #menu.visible .menu-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -147,8 +149,9 @@ html ::-webkit-scrollbar {
     list-style: none;
     height: 10vh;
     background: green;
+    position: relative;
   }
-  body header nav #menu.visible .menu-item a {
+  body nav #menu.visible .menu-item a {
     height: 100%;
     width: 100%;
     text-decoration: none;
@@ -167,13 +170,21 @@ html ::-webkit-scrollbar {
             justify-content: center;
     font-size: 9vh;
   }
-  body header nav #menu.visible .menu-item button {
+  body nav #menu.visible .menu-item button {
     background: none;
     border: none;
     width: 100%;
     height: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10vh;
+    left: 90vw;
+    z-index: 1;
   }
-  body header #menu-toggle.visible {
+  body nav #menu-toggle {
+    position: absolute;
+  }
+  body nav #menu-toggle {
     position: absolute;
     top: 0;
     left: 0;
@@ -230,12 +241,16 @@ html ::-webkit-scrollbar {
     min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
     min-width: fit-content;
-    --max-width: ;
+    max-width: 100%;
   }
   body main .cta-container .cta-description-container {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+  body main .page-section {
+    width: 100%;
+    min-height: 100vh;
   }
 }
 
