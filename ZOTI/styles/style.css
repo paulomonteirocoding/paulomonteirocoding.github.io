@@ -301,6 +301,11 @@ body main .page-section {
     height: 5vh;
     background: red;
   }
+  body nav #menu .menu-item:first-child {
+    width: 0;
+    height: 0;
+    display: none;
+  }
   body nav #menu .menu-item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -346,6 +351,12 @@ body main .page-section {
         -ms-flex-pack: center;
             justify-content: center;
     font-size: 2rem;
+  }
+  body main .page-section:nth-child(even) {
+    background-color: peachpuff;
+  }
+  body main .page-section:nth-child(odd) {
+    background-color: orange;
   }
   body main .page-section {
     margin-top: 5vh;

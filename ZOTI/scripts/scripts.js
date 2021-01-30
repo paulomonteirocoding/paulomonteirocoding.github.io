@@ -101,7 +101,7 @@ window.onload = function () {
 };
     
 document.getElementById("menu-toggle").addEventListener('click',toggleMenuVisibility);
-    
+
 function toggleMenuVisibility(){
     if(window.innerWidth < 900){
         

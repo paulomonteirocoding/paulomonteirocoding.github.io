@@ -107,6 +107,8 @@ html{
 
                 padding: 1rem;
 
+                
+
                 .menu-item{
                     display: flex;
                     flex-direction: row;
@@ -214,7 +216,11 @@ html{
                 height: 5vh;
 
                 background: red;
-
+                .menu-item:first-child{
+                    width: 0;
+                    height: 0;
+                    display: none;
+                }
 
                 .menu-item{
                     display: flex;
@@ -252,6 +258,13 @@ html{
             }
         }
         main{
+            .page-section:nth-child(even){
+                background-color: peachpuff;
+            }
+            .page-section:nth-child(odd){
+                background-color: orange;
+            }
+            
             .page-section{
                 margin-top: 5vh;
             }
