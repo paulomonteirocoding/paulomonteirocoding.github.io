@@ -35,10 +35,6 @@ body {
       justify-content: space-around;
 }
 
-body .hidden {
-  display: none;
-}
-
 body nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,13 +43,8 @@ body nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   max-height: -webkit-max-content;
   max-height: -moz-max-content;
   max-height: max-content;
@@ -61,27 +52,23 @@ body nav {
   position: sticky;
   top: 0;
   left: 0;
-}
+  background-color: yellowgreen;
+  /*
+        ul{
+            display: flex;
+            flex-direction: row;
+            margin: 1rem 1rem;        
+            list-style: none;
+            font-size: 2rem;
+            
+            li{
+                margin: 1.5rem;
 
-body nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 1rem 1rem;
-  list-style: none;
-  font-size: 2rem;
-}
-
-body nav ul li {
-  margin: 1.5rem;
-}
-
-body nav ul li a {
-  text-decoration: none;
+                a{
+                    text-decoration: none;
+                }
+            }
+        }*/
 }
 
 body main {

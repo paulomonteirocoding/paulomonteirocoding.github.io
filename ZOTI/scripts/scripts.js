@@ -34,21 +34,42 @@ window.onload = function () {
         
     ];
 
+    var socialLinks = 
+    [
+        {
+            name:"Facebook",
+            link:"#",
+            element:"<i class=\"fab fa-facebook\"></i>"
+        },
+        {
+            name:"Instagram",
+            link:"#",
+            element:"<i class=\"fab fa-instagram\"></i>"
+        },
+        {
+            name:"WhatsApp",
+            link:"#",
+            element:"<i class=\"fab fa-whatsapp\"></i>"
+        }
+    ];
     var childElement;
     var element;
 
     element = document.getElementById("menu");
-    var innerHTMLString = "";
+    var innerHTMLString = "<li onclick=\"toggleMenuVisibility()\" class=\"menu-item\" id=\"menu-close\"><i class=\"fa fa-times\"></i></li>";
 
-    innerHTMLString += "<li class=\"menu-item\"><button id=\"menu-close\" onclick=\"toggleMenuVisibility\(\)\"><i class=\"fas fa-times\"></i></button></li>";
     
         //create the menu
         for( i = 0; i < menu.length ; i++ ){
             innerHTMLString += "<li class=\"menu-item\" onclick=\"toggleMenuVisibility\(\)\"><a href=\""+ menu[i].link +"\" target=\"" + menu[i].target +"\">" + menu[i].name + "</a></li>";
         }
-    
+
+        /*for( i = 0; i < socialLinks.length ; i++ ){
+            innerHTMLString +="<li><a href=\"" + socialLinks[i].link + "\">" + socialLinks[i].element + "</a></li>";
+        }
+*/
+        
         element.innerHTML = innerHTMLString;
-    
         //create the sections the menu points to
         
         for( i = 1; i < menu.length ; i++ ){
@@ -77,12 +98,16 @@ window.onload = function () {
     
     
         
-    };
+};
     
-    document.getElementById("menu-toggle").addEventListener('click',toggleMenuVisibility);
+document.getElementById("menu-toggle").addEventListener('click',toggleMenuVisibility);
     
-    function toggleMenuVisibility(){
+function toggleMenuVisibility(){
+    if(window.innerWidth < 900){
+        
         document.getElementById("menu").classList.toggle("visible");
         document.getElementById("menu-close").firstChild.classList.toggle("fa-3x");
+        document.getElementById("nav").classList.toggle("overlay");
+
     }
-    
+}

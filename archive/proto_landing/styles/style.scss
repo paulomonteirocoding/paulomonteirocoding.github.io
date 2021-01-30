@@ -21,10 +21,6 @@ html{
 
 body{
     
-    .hidden{
-        display: none;
-    }
-    
     min-width: 100vw;
     min-height: 100vh;
     background-color: lightblue;
@@ -35,18 +31,15 @@ body{
     nav{
         display: flex;
         flex-direction: row;
-        width: 100%;
-        justify-content: flex-end;
-        min-width: max-content;
+        justify-content: space-around;
         max-height: max-content;
         position: sticky;
-        top:0;
+        top: 0;
         left: 0;
+
+        background-color: yellowgreen;
         
-        button{
-
-        }
-
+        /*
         ul{
             display: flex;
             flex-direction: row;
@@ -61,7 +54,7 @@ body{
                     text-decoration: none;
                 }
             }
-        }
+        }*/
         
         
     }
