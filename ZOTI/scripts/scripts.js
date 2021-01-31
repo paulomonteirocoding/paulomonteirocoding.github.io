@@ -103,11 +103,31 @@ window.onload = function () {
 document.getElementById("menu-toggle").addEventListener('click',toggleMenuVisibility);
 
 function toggleMenuVisibility(){
-    if(window.innerWidth < 900){
+    if(window.innerWidth < 900 || document.getElementById("menu").classList.contains("visible")){
         
         document.getElementById("menu").classList.toggle("visible");
         document.getElementById("menu-close").firstChild.classList.toggle("fa-3x");
         document.getElementById("nav").classList.toggle("overlay");
 
     }
+}
+
+var slideIndex = [1,1];
+var slideId = "mySlides";
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId);
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
 }

@@ -19,125 +19,125 @@ html{
 }
 
 
-    body{
-        position: relative;
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    max-height: fit-content;
+
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width:100vw;
+        max-height:max-content;
+        min-height: calc(2rem + 100px);
+        background-color: white ;
+        
+
+        h1{
+            order:2;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin:1rem;
+        }
+
+        img{
+            order:1;
+            margin:1rem;
+        }
+
+        
+
+        
+    }
+
+    nav{
+        padding:1rem;
+        margin:1rem;
+
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        min-height: 100vh;
-        max-height: fit-content;
+        justify-content: space-around;
+        min-width: 100vw;
+        height:5vh;
 
-        header{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-            width:100vw;
-            max-height:max-content;
-            min-height: calc(2rem + 100px);
-            background-color: white ;
-           
+        background-color: yellowgreen;
+        
+        position: sticky;
+        top: 0;
+        left: 0;
+        &.overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
 
-            h1{
-                order:2;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                margin:1rem;
+            z-index: 2;
+
+            #menu-toggle{
+                display: none;
             }
-
-            img{
-                order:1;
-                margin:1rem;
-            }
-
-            
-
-            
         }
 
-        nav{
-            padding:1rem;
-            margin:1rem;
-
+        #menu{
+            display: none;
+        }
+        
+        #menu.visible{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            min-width: 100vw;
-            height:5vh;
-
-            background-color: yellowgreen;
-            
-            position: sticky;
+            position: fixed;
             top: 0;
             left: 0;
-            &.overlay{
-                position: fixed;
-                top: 0;
-                left: 0;
-                margin: 0;
+            z-index: 2;
 
-                z-index: 2;
+            width: 100vw;
+            height: 100vh;
 
-                #menu-toggle{
-                    display: none;
-                }
-            }
+            background: red;
 
-            #menu{
-                display: none;
-            }
+            padding: 1rem;
+
             
-            #menu.visible{
+
+            .menu-item{
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 align-items: center;
                 justify-content: space-around;
-                position: fixed;
-                top: 0;
-                left: 0;
-                z-index: 2;
+                width: 100%;
+                min-width: max-content ;
+                list-style: none;
+                height: 10vh;
+                background: green;
 
-                width: 100vw;
-                height: 100vh;
+                position: relative;
 
-                background: red;
-
-                padding: 1rem;
-
-                
-
-                .menu-item{
+                a{
+                    height: 100%;
+                    width: 100%;
+                    text-decoration: none;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    justify-content: space-around;
-                    width: 100%;
-                    min-width: max-content ;
-                    list-style: none;
-                    height: 10vh;
-                    background: green;
+                    justify-content: center;
 
-                    position: relative;
-
-                    a{
-                        height: 100%;
-                        width: 100%;
-                        text-decoration: none;
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        justify-content: center;
-
-                        font-size: 9vh;
-                    }
-
-                    
+                    font-size: 9vh;
                 }
+
+                
             }
         }
+    }
 
         main{
 
@@ -151,7 +151,7 @@ html{
 
             .cta-container{
                 min-width: fit-content;
-                min-height: 100vh;
+                min-height: 50vh;
                 max-height: fit-content;
 
                 display: flex;
@@ -159,31 +159,76 @@ html{
                 align-items: center;
                 justify-content: space-around;
 
-                background-color: yellowgreen;
+                margin: 1rem;
+                
+                .slideshow-container {
+                    max-width: 1000px;
+                    position: relative;
+                    margin: auto;
+
+                    .mySlides{
+                        display: none;
+                        img {
+                            vertical-align: middle;
+                        
+                        }
+                    }
+
+                    .prev, .next {
+                        cursor: pointer;
+                        position: absolute;
+                        top: 50%;
+                        width: auto;
+                        padding: 16px;
+                        margin-top: -22px;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 18px;
+                        transition: 0.6s ease;
+                        border-radius: 0 3px 3px 0;
+                        user-select: none;
+                        }
+                
                 
 
-                margin: 1rem;
-
-                button{
-                    order: 2;
-                    margin:1rem;
-                    min-width: fit-content;
-                    max-width: 100% ;
-                }
-
-                .cta-description-container{
-                    order: 1;
+                    .next {
+                    right: 0;
+                    border-radius: 3px 0 0 3px;
                     }
+
+                    /* On hover, add a grey background color */
+                    .prev:hover, .next:hover {
+                    background-color: #f1f1f1;
+                    color: black;
+
+                    button{
+                        order: 2;
+                        margin:1rem;
+                        min-width: fit-content;
+                        max-width: 100% ;
+                    }
+
+                    .cta-description-container{
+                        order: 1;
+                    }
+                }
+            
+        
+
+                
+             
+                }
             }
 
             .page-section{
-                width: 100%;
+                width: 100vw;
                 min-height: 100vh;
                 padding-top:5vh;
             }
-
         }
     }
+        
+    
 
 @media (min-width: 901px) {
 
@@ -197,7 +242,7 @@ html{
             align-items: center;
             justify-content: space-around;
             min-width: 100vw;
-            height:5vh;
+            height: 4.7rem;
 
             background-color: yellowgreen;
             
@@ -213,12 +258,11 @@ html{
                 justify-content: space-around;
 
                 width: 100vw;
-                height: 5vh;
-
+                height: 4.7rem;
                 background: red;
                 .menu-item:first-child{
-                    width: 0;
-                    height: 0;
+                    width: 0px;
+                    height: 0px;
                     display: none;
                 }
 
@@ -228,19 +272,11 @@ html{
                     align-items: center;
                     justify-content: space-around;
                     width: 100%;
-                    min-width: max-content ;
+                    height: 4.7rem;
                     list-style: none;
                     height: inherit;
                     background: green;
 
-                    position: relative;
-                    
-                    i{
-                        display: none;
-                        position: absolute;
-                        z-index: -1;
-
-                    }
 
                     a {
                         height: 100%;
@@ -251,7 +287,8 @@ html{
                         align-items: center;
                         justify-content: center;
 
-                        font-size: 2rem;
+                        font-size: 2.7rem;
+                        padding: 1rem;
                     }
 
                 }
@@ -266,7 +303,7 @@ html{
             }
             
             .page-section{
-                margin-top: 5vh;
+               padding-top: 4.7rem;
             }
         }
     }
