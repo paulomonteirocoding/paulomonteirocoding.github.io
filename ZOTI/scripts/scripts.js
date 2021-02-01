@@ -112,7 +112,7 @@ function toggleMenuVisibility(){
     }
 }
 
-var slideIndex = [1,1];
+var slideIndex = [1,3];
 var slideId = "mySlides";
 showSlides(1, 0);
 showSlides(1, 1);
