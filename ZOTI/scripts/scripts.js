@@ -112,22 +112,22 @@ function toggleMenuVisibility(){
     }
 }
 
-var slideIndex = [1,3];
 var slideId = "mySlides";
-showSlides(1, 0);
-showSlides(1, 1);
+var slidesCount = document.getElementsByClassName(slideId).length - 1;
+var slideIndex = 0;
+showSlides(0);
 
-function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
+function plusSlides(no) {
+    showSlides(slideIndex+= n, no);
 }
 
-function showSlides(n, no) {
+function showSlides(no) {
   var i;
   var x = document.getElementsByClassName(slideId);
   if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
+  if (n < 1) {slideIndex = x.length-1}
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";  
   }
-  x[slideIndex[no]-1].style.display = "block";  
+  x[slideIndex].style.display = "block";  
 }
