@@ -112,7 +112,7 @@ function toggleMenuVisibility(){
     }
 }
 
-var slideId = "mySlides";
+var slideClassName = "mySlides";
 var slidesCount = document.getElementsByClassName(slideId).length - 1;
 var slideIndex = 0;
 showSlides(0);
@@ -123,10 +123,10 @@ function plusSlides(no) {
 
 function showSlides(no) {
   var i;
-  var x = document.getElementsByClassName(slideId);
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length-1}
-  for (i = 0; i < x.length; i++) {
+  var x = document.getElementsByClassName(slideId).length;
+  if (no > x) {slideIndex = 1}    
+  if (no < 1) {slideIndex = x}
+  for (i = 0; i < x ; i++) {
      x[i].style.display = "none";  
   }
   x[slideIndex].style.display = "block";  
