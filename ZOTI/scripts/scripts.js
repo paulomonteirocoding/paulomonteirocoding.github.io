@@ -124,8 +124,8 @@ function plusSlides(no) {
 function showSlides(no) {
   var i;
   var x = document.getElementsByClassName(slideId).length;
-  if (no > x) {slideIndex = 1}    
-  if (no < 1) {slideIndex = x}
+  if (no > x) {slideIndex = slidesCount - 1}    
+  if (no < 0) {slideIndex = 0}
   for (i = 0; i < x ; i++) {
      x[i].style.display = "none";  
   }
