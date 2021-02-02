@@ -166,45 +166,7 @@ body{
 
                 margin: 1rem;
                 
-                .slideshow-container {
-                    max-width: 1000px;
-                    position: relative;
-                    margin: auto;
-
-                    .mySlides{
-                        display: none;
-                        img {
-                            vertical-align: middle;
-                        
-                        }
-                    }
-
-                    .prev, .next {
-                        cursor: pointer;
-                        position: absolute;
-                        top: 50%;
-                        width: auto;
-                        padding: 16px;
-                        margin-top: -22px;
-                        color: white;
-                        font-weight: bold;
-                        font-size: 18px;
-                        transition: 0.6s ease;
-                        border-radius: 0 3px 3px 0;
-                        user-select: none;
-                        }
-                
-                
-
-                    .next {
-                    right: 0;
-                    border-radius: 3px 0 0 3px;
-                    }
-
-                    /* On hover, add a grey background color */
-                    .prev:hover, .next:hover {
-                    background-color: #f1f1f1;
-                    color: black;
+                //setup slides from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow
 
                     button{
                         order: 2;
