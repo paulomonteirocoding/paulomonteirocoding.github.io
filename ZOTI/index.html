@@ -19,7 +19,7 @@
         <header>
 
             <h1>Zoti Reprehenderit mollit enim adipisicing officia consectetur dolore elit.</h1>
-            <img src="images/logo.png" alt="Zoti, Joalharia Artesanal" height="100px">
+            <img src="images/logo.svg" alt="Zoti, Joalharia Artesanal" height="100px">
         </header>
 
         <nav id="nav">
@@ -37,12 +37,32 @@
 
             <div class="cta-container">
 
-                <button>CTA BTN</button>
-                <div class="cta-description-container">
-                    <h1>Cupidatat ea amet laborum minim exercitation.</h1>
-                    <p>Et mollit non nulla ea ea adipisicing. Ex quis laborum dolor exercitation elit do exercitation nostrud Lorem esse ut ad incididunt aute. Ea enim aute officia laborum dolor elit. Qui proident laboris fugiat eiusmod culpa duis consectetur nostrud. Aliqua ipsum mollit sit aute amet irure. Consequat commodo est anim sint cupidatat consectetur culpa commodo officia occaecat et aliqua. Occaecat ea nisi ullamco dolore nostrud proident exercitation amet et excepteur cillum ipsum do.</p>
-                </div>
-                <!-- setup slides from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow-->
+                <div id="slideshow-container">
+                    <a id="prev" class="slide-navigation" onclick="plusSlides(-1)"><i class="fas fa-chevron-left"></i></a>
+                    
+                    <div id="image-container">
+                        
+                        <div class="mySlides fade">
+                            <img src="https://via.placeholder.com/1750x100/0000FF/808080?Text=Digital.com" style="width:100%">
+                        </div>
+                        
+                        <div class="mySlides fade">
+                            <img src="https://via.placeholder.com/500/0000FF/808080?Text=AAA.com" style="width:100%">
+                        </div>
+                        
+                        <div class="mySlides fade">
+                            <img src="https://via.placeholder.com/500/0000FF/808080?Text=BBB.com" style="width:100%">
+                        </div>
+                    </div>    
+                    <a id="next" class="slide-navigation" onclick="plusSlides(1)"><i class="fas fa-chevron-right"></i></a>
+                    
+                    </div>
+                    <button>CTA BTN</button>
+                    <div class="cta-description-container">
+                        <h1>Cupidatat ea amet laborum minim exercitation.</h1>
+                        <p>Et mollit non nulla ea ea adipisicing. Ex quis laborum dolor exercitation elit do exercitation nostrud Lorem esse ut ad incididunt aute. Ea enim aute officia laborum dolor elit. Qui proident laboris fugiat eiusmod culpa duis consectetur nostrud. Aliqua ipsum mollit sit aute amet irure. Consequat commodo est anim sint cupidatat consectetur culpa commodo officia occaecat et aliqua. Occaecat ea nisi ullamco dolore nostrud proident exercitation amet et excepteur cillum ipsum do.</p>
+                    </div>
+
             </div>
         
         </main>
