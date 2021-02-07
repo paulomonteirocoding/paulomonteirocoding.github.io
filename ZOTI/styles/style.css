@@ -199,6 +199,11 @@ body #translucent-background nav #menu.visible {
   width: 100vw;
   height: 100vh;
   padding: 1rem;
+  background-image: url(../images/logo_escudo_antigo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 body #translucent-background nav #menu.visible .menu-item {
