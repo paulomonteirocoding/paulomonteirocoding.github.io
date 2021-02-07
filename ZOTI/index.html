@@ -16,45 +16,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body >
-        <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v9.0" nonce="tw1d1NHC"></script>
-
-        <div id="translucent-background">
-
-            
-            <header>
-
-                <h1>Zoti - Joalharia Artesanal</h1>
-                <img src="images/logo.svg" alt="Zoti, Joalharia Artesanal" height="100px">
-            </header>
-
-            <nav id="nav">
-                <button id="menu-toggle"> 
-                    <i class="fas fa-bars"></i> 
-                    <span>MENU</span> 
-                </button>
-                <ul id="menu">
-
-                </ul>
-
-            </nav>
-
-            <main>
-
-                <div class="cta-container">
-                        <button>CTA BTN</button>
-                        <div class="cta-description-container">
-                            <h1>Cupidatat ea amet laborum minim exercitation.</h1>
-                            <p>Et mollit non nulla ea ea adipisicing. Ex quis laborum dolor exercitation elit do exercitation nostrud Lorem esse ut ad incididunt aute. Ea enim aute officia laborum dolor elit. Qui proident laboris fugiat eiusmod culpa duis consectetur nostrud. Aliqua ipsum mollit sit aute amet irure. Consequat commodo est anim sint cupidatat consectetur culpa commodo officia occaecat et aliqua. Occaecat ea nisi ullamco dolore nostrud proident exercitation amet et excepteur cillum ipsum do.</p>
+        <body>
+            <div id="translucent-background">
+                <header>
+    
+                    <h1>Zoti - Joalharia Artesanal</h1>
+                    <img src="images/logo.svg" alt="Zoti, Joalharia Artesanal" height="100px">
+                </header>
+    
+                <nav id="nav">
+                    <button id="menu-toggle"> 
+                        <i class="fas fa-bars" aria-hidden="true"></i> 
+                        <span>MENU</span> 
+                    </button>
+                    <ul id="menu"><li onclick="toggleMenuVisibility()" class="menu-item" id="menu-close"><i class="fa fa-times" aria-hidden="true"></i></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#" target="_self">Home</a></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#about" target="_self">Sobre</a></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#services" target="_self">Serviços</a></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#products" target="_self">Produtos</a></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#contacts" target="_self">Contactos</a></li></ul>
+    
+                </nav>
+    
+                <main>
+    
+                    <div class="cta-container">
+                            <button>CTA BTN</button>
+                            <div class="cta-description-container">
+                                <h1>Cupidatat ea amet laborum minim exercitation.</h1>
+                                <p>Et mollit non nulla ea ea adipisicing. Ex quis laborum dolor exercitation elit do exercitation nostrud Lorem esse ut ad incididunt aute. Ea enim aute officia laborum dolor elit. Qui proident laboris fugiat eiusmod culpa duis consectetur nostrud. Aliqua ipsum mollit sit aute amet irure. Consequat commodo est anim sint cupidatat consectetur culpa commodo officia occaecat et aliqua. Occaecat ea nisi ullamco dolore nostrud proident exercitation amet et excepteur cillum ipsum do.</p>
+                            </div>
+    
+                    </div>
+                
+                <section id="about" class="page-section">
+                    <h1>Sobre</h1>
+                    <p>Por favor dá-me um texto para por aqui sobre a tua marca</p>
+                </section>
+                <section id="services" class="page-section">
+                    <h1>Serviços</h1>
+                    <p>Anim occaecat deserunt reprehenderit ea ea.</p>
+                </section>
+                <section id="products" class="page-section">
+                    <h1>Produtos</h1>
+                    <p>Temos o gosto de construír à mão e com técnicas artesanais clássicas as melhores peças de joalharia.<br>Nos nossos artigos poderás encontrar várias propostas de brincos, pulseiras, colares e os demais</p>
+                    <h2>Captamos a tua curiosidade?<br> Vê abaixo alguns dos nossos trabalhos:</h3>
+                    <div id="facebook-image-container">
+                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FKarrasku%2Fphotos%2Fa.1749155248697192%2F2293935770885801%2F%3Ftype%3D3&width=350&show_text=true&height=497&appId" width="350" height="497" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FKarrasku%2Fphotos%2Fa.1749155248697192%2F2272287129717332%2F%3Ftype%3D3&width=350&show_text=true&height=407&appId" width="350" height="407" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FKarrasku%2Fphotos%2Fa.1749155248697192%2F2272287173050661%2F%3Ftype%3D3&width=350&show_text=true&height=498&appId" width="350" height="498" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                         </div>
-
-                </div>
-            
+                </section>
+                <section id="contacts" class="page-section">
+                    <span class="col"><h1>Contactos</h1>
+                    <p>Anim occaecat deserunt reprehenderit ea ea.</p></span>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmedia%2Fset%2F%3Fvanity%3DKarrasku%26set%3Da.1749155248697192&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </section>
             </main>
-            <footer></footer>
-
-        </div>
-
-        <script src="scripts/scripts.js"></script>
+    
+            </div>
+    <script src="scripts/scripts.js"></script>
     </body>
 </html>
