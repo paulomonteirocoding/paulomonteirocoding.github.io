@@ -209,7 +209,7 @@ body{
                     margin: 1rem;
                     
                     button{
-                        grid-area: cta-btn;
+                        order: 2;
                         margin:1rem;
                         min-width: fit-content;
                         max-width: 100% ;
@@ -217,6 +217,7 @@ body{
                     }
     
                     .cta-description-container{
+                        order:1;
                         grid-area: cta-text;
                         
                     }
@@ -355,11 +356,53 @@ body{
             }
         }
         main{
-            /*.page-section:nth-child(even){
+            
+
+            .cta-container{
+                min-width: fit-content;
+                min-height: 50vh;
+                max-height: fit-content;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+
+                margin: 1rem;
+                
+                button{
+                    order: 2;
+                    margin:1rem;
+                    min-width: fit-content;
+                    max-width: 100% ;
+                    min-width: 10rem;
+                    height: 10rem;
+                    font-size: 3rem;
+                    font-weight: bold;
+                    border-top:0;
+                    border-left:0;
+                    padding:0.5rem;
+
+                    &:active{
+                        transform: translate(0.5rem,0.5rem);
+                        border: none;
+                        outline:none;
+                        box-shadow: inset 0.2rem 0.2rem lightgray;
+                    }
+
+                    &:focus{
+                        outline:none;           
+                    }
+                }
+
+                .cta-description-container{
+                    order:1;
+                    max-width: 50%;
+                    
+                }
+
             }
-            .page-section:nth-child(odd){
-            }
-            */
+
             .page-section{
                 width: 100vw;
                 min-height: 100vh;
@@ -422,9 +465,6 @@ body{
 
             }
 
-            #products{
-                
-            }
         }
     }
     }
