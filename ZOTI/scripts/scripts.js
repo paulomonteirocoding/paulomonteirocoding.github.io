@@ -54,6 +54,7 @@ window.onload = function () {
                     name:"E muitas outras peças feitas de forma tradicional e artesanal"
                 }
             ]
+
         },
         {
             name: "Contactos",
@@ -63,8 +64,9 @@ window.onload = function () {
             children:
             [
                 {
-                    name:"email",
-                    value :"afgbaln@galdkba.com"
+                    name:"Facebook",
+                    value :"afgbaln@galdkba.com",
+                    facebookGallery:"<iframe src=\"https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmedia%2Fset%2F%3Fvanity%3DKarrasku%26set%3Da.1749155248697192&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId\" width=\"340\" height=\"500\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>"
                 },
                 {
                     name:"afgbaln@galdkba.com",
@@ -149,9 +151,15 @@ window.onload = function () {
                 });
             }
 
+            
+
             childElement.appendChild(list);
 
             element.appendChild(childElement);
+
+            if(menu[i].facebookGallery != null){
+                element.innerHTML += menu[i].children.facebookGallery;
+            }
 
         }
     
