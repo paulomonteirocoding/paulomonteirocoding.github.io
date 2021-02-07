@@ -17,6 +17,8 @@ window.onload = function () {
             name: "Serviços",
             link: "#services",
             target: "_self",
+            text: "Anim occaecat deserunt reprehenderit ea ea.",
+            
             children:[
                 {
                     name:"Recriação Histórica"
@@ -34,7 +36,7 @@ window.onload = function () {
             name: "Produtos",
             link: "#products",
             target: "_self",
-            text: "Anim occaecat deserunt reprehenderit ea ea."
+            text: "Anim occaecat deserunt reprehenderit ea ea.",
             children:[
                 {
                     name:"Brincos"
@@ -57,19 +59,19 @@ window.onload = function () {
             name: "Contactos",
             link: "#contacts",
             target: "_self",
-            text: "Anim occaecat deserunt reprehenderit ea ea."
+            text: "Anim occaecat deserunt reprehenderit ea ea.",
             children:
             [
                 {
-                    name:"email"
+                    name:"email",
                     value :"afgbaln@galdkba.com"
                 },
                 {
-                    name:"afgbaln@galdkba.com"
+                    name:"afgbaln@galdkba.com",
                     value :"afgbaln@galdkba.com"
                 },
                 {
-                    name:"afgbaln@galdkba.com"
+                    name:"afgbaln@galdkba.com",
                     value :"afgbaln@galdkba.com"
                 }
             ]
@@ -136,10 +138,24 @@ window.onload = function () {
     
             childElement = document.createElement("p");
             childElement.innerText = menu[i].text;
+            
+            var list = document.createElement("UL");
+            
+            if(menu[i].children != null){
+                menu[i].children.forEach(child => {
+                    var listItem = document.createElement("LI");
+                    listItem.innerHTML = child.name;
+                    list.appendChild(listItem)
+                });
+            }
+
+            childElement.appendChild(list);
+
             element.appendChild(childElement);
+
         }
     
-    
+        
         
 };
     
