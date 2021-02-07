@@ -101,7 +101,7 @@ body{
             height:4.7rem;
     
             
-            background-color: rgba(229,220,4, 0.3);
+            background-color: rgba(229,220,4, 0.7);
             
     
             position: sticky;
@@ -215,11 +215,40 @@ body{
     
                 
                 
-                .page-section{
+                #contacts{
                     width: 100vw;
                     min-height: 100vh;
                     padding-top:5vh;
                     background: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    .col{
+                        width: 50%;
+                    }
+                    ul{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-around;
+                        width: 100%;
+                        height: fit-content;
+                        li{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            list-style: none;
+
+                            a{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-between;
+                            }
+                        }
+                    }
+
                 }
             }
         }
@@ -324,8 +353,68 @@ body{
             .page-section{
                 width: 100vw;
                 min-height: 100vh;
-               padding-top: 4.7rem;
-               background: none;
+                padding-top: 4.7rem;
+                background: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;    
+            }
+
+            #contacts{
+                min-height: 25vh;
+                max-height: fit-content;
+                padding-top:4.7rem;
+                background: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                .col{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                }
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                    max-width: 50vw;
+                    max-height: 75vh;
+                    flex-wrap: wrap;
+                    li{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        list-style: none;
+
+                        a:active, a:link, a:visited{
+                            height: 100%;
+                            max-width: 50%;
+                            text-decoration: none;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+    
+                            font-family: 'Pinyon Script', cursive;
+    
+                            text-decoration: none;
+    
+                            font-size: 2.7rem;
+                            padding: 1rem;
+                        }
+                    }
+                }
+
+            }
+
+            #products{
+                
             }
         }
     }
