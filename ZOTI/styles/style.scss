@@ -16,6 +16,7 @@ html{
     padding:0;
     box-sizing:border-box;
     font-family: 'Raleway', cursive;
+    background:none;
 }
 
 h1{
@@ -35,232 +36,224 @@ body{
     justify-content: space-between;
     min-height: 100vh;
     max-height: fit-content;
+    
+    background-image: url('../images/logo_escudo.svg');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
 
-    header{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        width:100vw;
-        max-height:max-content;
-        min-height: calc(2rem + 100px);
-        background-color: white ;
+
+    #translucent-background{
+
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        height: 100%;
         
-
-        h1{
-            order:2;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            margin:1rem;
-        }
-
-        img{
-            order:1;
-            margin:1rem;
-        }
-
-        
-
-        
-    }
-
-    nav{
-        padding:1rem;
-
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        min-width: 100vw;
-        height:4.7rem;
-
-        position: sticky;
-        top: 0;
-        left: 0;
-        &.overlay{
-            position: fixed;
-            top: 0;
-            left: 0;
-            margin: 0;
-
-            z-index: 2;
-
-            #menu-toggle{
-                display: none;
-            }
-        }
-
-        #menu{
-            display: none;
-        }
+        justify-content: space-between;
+        min-height: 100vh;
+        max-height: fit-content;
         
-        #menu.visible{
+
+        header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            width:100vw;
+            max-height:max-content;
+            min-height: calc(2rem + 100px);
+            
+    
+            h1{
+                order:2;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin:1rem;
+                border-bottom: 1rem ridge rgba(18,78,111,0.5);
+                border-right: 1rem ridge rgba(18,78,111,0.5);
+                border-radius: 0 0 1rem 0;
+            }
+    
+            img{
+                order:1;
+                margin:1rem;
+            }
+    
+            
+    
+            
+        }
+    
+        nav{
+            padding:1rem;
+    
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            position: fixed;
+            min-width: 100vw;
+            height:4.7rem;
+    
+            
+            background-color: rgba(229,220,4, 0.3);
+            
+    
+            position: sticky;
             top: 0;
             left: 0;
-            z-index: 2;
-
-            width: 100vw;
-            height: 100vh;
-
-            background: red;
-
-            padding: 1rem;
-
+            &.overlay{
+                position: fixed;
+                top: 0;
+                left: 0;
+                margin: 0;
+    
+                z-index: 2;
+    
+                #menu-toggle{
+                    display: none;
+                }
+            }
+    
+            #menu{
+                display: none;
+            }
             
-
-            .menu-item{
+            #menu.visible{
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 align-items: center;
                 justify-content: space-around;
-                width: 100%;
-                min-width: max-content ;
-                list-style: none;
-                height: 10vh;
-                background: green;
-
-                position: relative;
-
-                a{
-                    height: 100%;
-                    width: 100%;
-                    text-decoration: none;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-
-                    font-size: 9vh;
-                }
-
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 2;
+    
+                width: 100vw;
+                height: 100vh;
+    
+                padding: 1rem;
+    
                 
-            }
-        }
-    }
-
-        main{
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 100vh;
-            max-height: fit-content;
-            max-width: 100vw;
-
-            .cta-container{
-                min-width: fit-content;
-                min-height: 50vh;
-                max-height: fit-content;
-
-                display: grid;
-                grid-template-areas: "slideshow slideshow slideshow"
-                                    "cta-text cta-text cta-text"
-                                    "cta-text cta-text cta-text"
-                                     "cta-btn cta-btn cta-btn";
-
-                margin: 1rem;
-                
-                button{
-                    grid-area: cta-btn;
-                    margin:1rem;
-                    min-width: fit-content;
-                    max-width: 100% ;
-                    height: 100%;
-                }
-
-                .cta-description-container{
-                    grid-area: cta-text;
-                    
-                }
-
-                #slideshow-container{
-                    grid-area: slideshow;
+    
+                .menu-item{
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-around;
-
-                    #image-container{
+                    width: 100%;
+                    min-width: max-content ;
+                    list-style: none;
+                    height: 10vh;
+    
+                    position: relative;
+    
+                    a, a:active, a:link, a:visited{
+                        height: 100%;
                         width: 100%;
-                    }
-
-                    .slide-navigation{
-                        background:none;
-                        &:first-child{
-                            border-radius: 1rem 0 0 1rem;
-                        }
-
-                        &:last-child{
-                            border-radius: 0 1rem 1rem 0;
-                        }
-                        width: 6rem;
-                        height: 6rem;
-                        font-size: 5rem;
-                        padding: 0;
-                        margin: 0;
-
+                        text-decoration: none;
                         display: flex;
                         flex-direction: row;
                         align-items: center;
-                        justify-content: space-around;
+                        justify-content: center;
+    
+                        font-size: 2.7rem;
                         
-
-                        &:hover{
-                            background-color: rgba(48, 46, 46, 0.5);
-                        }
-
+                        font-family: 'Pinyon Script', cursive;
+                        font-weight: bold;
+    
+                        color: black;
                     }
-
-                        
-                    /* On hover, add a black background color with a little bit see-through */
-                    .prev:hover, .next:hover {
-                    background-color: rgba(0,0,0,0.8);
-                    }
+    
+    
                     
-                    /* Fading animation */
-                    .fade {
-                    -webkit-animation-name: fade;
-                    -webkit-animation-duration: 1.5s;
-                    animation-name: fade;
-                    animation-duration: 1.5s;
-                    }
-                                            
-                    @keyframes fade {
-                    from {opacity: .4} 
-                    to {opacity: 1}
-                    }
-                    
-                    /* On smaller screens, decrease text size */
-                    @media only screen and (max-width: 600px) {
-                    .prev, .next,.text {font-size: 11px}
-                    }
-
                 }
             }
-
-            
-            
-            .page-section{
-                width: 100vw;
+        
+    
+            main{
+    
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
                 min-height: 100vh;
-                padding-top:5vh;
+                max-height: fit-content;
+                max-width: 100vw;
+    
+                .cta-container{
+                    min-width: fit-content;
+                    min-height: 50vh;
+                    max-height: fit-content;
+    
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+    
+                    margin: 1rem;
+                    
+                    button{
+                        grid-area: cta-btn;
+                        margin:1rem;
+                        min-width: fit-content;
+                        max-width: 100% ;
+                        height: 100%;
+                    }
+    
+                    .cta-description-container{
+                        grid-area: cta-text;
+                        
+                    }
+    
+                }
+    
+                
+                
+                .page-section{
+                    width: 100vw;
+                    min-height: 100vh;
+                    padding-top:5vh;
+                    background: none;
+                }
             }
         }
     }
+
+}
         
     
 
 @media (min-width: 901px) {
 
     body{
-        background-color: deeppink;
+
+        background-image: url('../images/logo_escudo.svg');
+        background-repeat:no-repeat;
+        background-position: center;
+        background-size: 100vw 100vh;
+        background-attachment: fixed;
+        #translucent-background{
+
+            background-color: rgba(255, 255, 255, 0.9);
+            width: 100%;
+            height: 100%;
+            
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            max-height: fit-content;
+            
+    
+            
         nav{
             margin:1rem;
 
@@ -271,12 +264,10 @@ body{
             min-width: 100vw;
             height: 4.7rem;
 
-            background-color: yellowgreen;
             
             #menu-toggle{
                     display: none;
             }
-            
 
             #menu{
                 display: flex;
@@ -284,9 +275,10 @@ body{
                 align-items: center;
                 justify-content: space-around;
 
+                background-color: rgba(229,220,4, 0.3);
+
                 width: 100vw;
                 height: 4.7rem;
-                background: red;
                 .menu-item:first-child{
                     width: 0px;
                     height: 0px;
@@ -302,10 +294,8 @@ body{
                     height: 4.7rem;
                     list-style: none;
                     height: inherit;
-                    background: green;
 
-
-                    a {
+                    a, a:active, a:link, a:visited{
                         height: 100%;
                         max-width: 50%;
                         text-decoration: none;
@@ -313,6 +303,10 @@ body{
                         flex-direction: row;
                         align-items: center;
                         justify-content: center;
+
+                        font-family: 'Pinyon Script', cursive;
+
+                        text-decoration: none;
 
                         font-size: 2.7rem;
                         padding: 1rem;
@@ -322,16 +316,18 @@ body{
             }
         }
         main{
-            .page-section:nth-child(even){
-                background-color: peachpuff;
+            /*.page-section:nth-child(even){
             }
             .page-section:nth-child(odd){
-                background-color: orange;
             }
-            
+            */
             .page-section{
+                width: 100vw;
+                min-height: 100vh;
                padding-top: 4.7rem;
+               background: none;
             }
         }
+    }
     }
 }

@@ -11,25 +11,68 @@ window.onload = function () {
             name: "Sobre",
             link: "#about",
             target: "_self",
-            text: "Anim occaecat deserunt reprehenderit ea ea."
+            text: "Por favor dá-me um texto para por aqui sobre a tua marca"
         },
         {
             name: "Serviços",
             link: "#services",
             target: "_self",
-            text: "Anim occaecat deserunt reprehenderit ea ea."
+            children:[
+                {
+                    name:"Recriação Histórica"
+                },
+                {
+                    name:"Recriação de ofícios"
+                },
+                {
+                    name:"Workshops"
+                }
+
+            ]
         },
         {
             name: "Produtos",
             link: "#products",
             target: "_self",
             text: "Anim occaecat deserunt reprehenderit ea ea."
+            children:[
+                {
+                    name:"Brincos"
+                },
+                {
+                    name:"Pulseiras"
+                },
+                {
+                    name:"Colares"
+                },
+                {
+                    name:"Peças em Cota de Malha personalizadas"
+                },
+                {
+                    name:"E muitas outras peças feitas de forma tradicional e artesanal"
+                }
+            ]
         },
         {
             name: "Contactos",
             link: "#contacts",
             target: "_self",
             text: "Anim occaecat deserunt reprehenderit ea ea."
+            children:
+            [
+                {
+                    name:"email"
+                    value :"afgbaln@galdkba.com"
+                },
+                {
+                    name:"afgbaln@galdkba.com"
+                    value :"afgbaln@galdkba.com"
+                },
+                {
+                    name:"afgbaln@galdkba.com"
+                    value :"afgbaln@galdkba.com"
+                }
+            ]
         }
         
     ];
@@ -110,32 +153,4 @@ function toggleMenuVisibility(){
         document.getElementById("nav").classList.toggle("overlay");
 
     }
-}
-
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
 }
