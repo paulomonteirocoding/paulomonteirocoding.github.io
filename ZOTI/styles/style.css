@@ -17,17 +17,27 @@ html ::-webkit-scrollbar {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Raleway', cursive;
+  font-family: 'Tangerine', cursive;
   background: none;
 }
 
 h1 {
-  font-family: 'Tangerine', cursive;
+  font-family: 'Parisienne', cursive;
   font-size: 4rem;
 }
 
+h2 {
+  font-family: 'Parisienne', cursive;
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: 'Parisienne', cursive;
+  font-size: 2.5rem;
+}
+
 p {
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 body {
@@ -486,7 +496,6 @@ body #translucent-background nav main #contacts ul li a {
   body #translucent-background main .page-section {
     width: 100vw;
     min-height: 100vh;
-    padding-top: 4.7rem;
     background: none;
     display: -webkit-box;
     display: -ms-flexbox;
