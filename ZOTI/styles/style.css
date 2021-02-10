@@ -109,6 +109,7 @@ body #translucent-background header {
   max-height: -moz-max-content;
   max-height: max-content;
   min-height: calc(2rem + 100px);
+  background-color: rgba(245, 245, 245, 0.4);
 }
 
 body #translucent-background header h1 {
