@@ -155,7 +155,7 @@ body #translucent-background nav {
       justify-content: space-around;
   min-width: 100vw;
   height: 4.7rem;
-  background-color: rgba(229, 220, 4, 0.7);
+  background-color: rgba(229, 176, 4, 0.9);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
