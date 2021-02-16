@@ -17,6 +17,7 @@ html{
     box-sizing:border-box;
     font-family: 'Tangerine', cursive;
     background:none;
+    color:peru;
 }
 
 h1{
@@ -48,7 +49,8 @@ body{
     max-height: fit-content;
     width: 100vw;
     
-    background-image: url('../images/logo_escudo.svg');
+    
+    background-image: url('../images/background_image_by_freestocktextures_com.jpg');
     background-repeat:no-repeat;
     background-position: center;
     background-size: 100vw 100vh;
@@ -175,7 +177,7 @@ body{
     
                 padding: 1rem;
 
-                background-image: url(../images/logo_escudo_antigo.svg);
+                background-image: url('../images/background_image_by_freestocktextures_com.jpg');
                 background-repeat:no-repeat;
                 background-position-x: right ;
                 background-size: cover;
@@ -359,7 +361,7 @@ body{
 
     body{
 
-        background-image: url('../images/logo_escudo.svg');
+        background-image: url('../images/background_image_by_freestocktextures_com.jpg');
         background-repeat:no-repeat;
         background-position: center;
         background-size: 100vw 100vh;
