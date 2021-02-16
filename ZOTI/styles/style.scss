@@ -290,7 +290,7 @@ body{
 
             .cta-description-container{
                 order:1;
-                max-width: 50%;
+                max-width: 90%;
                 padding: 1rem;
                 border-radius: 1rem;
             }
@@ -330,6 +330,7 @@ body{
 
                 flex-wrap: wrap;
                 
+                *{margin: 1rem;}
 
                 iframe[src*="facebook"]{
                     order: 1;
@@ -344,7 +345,7 @@ body{
 
                 #whatsapp-message-form{
                     order: 2;                            
-                    width: 30vw;
+                    width: 75vw;
                     height: fit-content;
                     display: flex;
                     flex-direction: column;

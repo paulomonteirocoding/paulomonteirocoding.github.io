@@ -359,7 +359,7 @@ body main .cta-container .cta-description-container {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  max-width: 50%;
+  max-width: 90%;
   padding: 1rem;
   border-radius: 1rem;
 }
@@ -421,6 +421,10 @@ body main #contacts #social-container {
       flex-wrap: wrap;
 }
 
+body main #contacts #social-container * {
+  margin: 1rem;
+}
+
 body main #contacts #social-container iframe[src*="facebook"] {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -440,7 +444,7 @@ body main #contacts #social-container #whatsapp-message-form {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  width: 30vw;
+  width: 75vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
