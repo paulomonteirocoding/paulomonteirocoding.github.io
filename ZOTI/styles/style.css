@@ -74,6 +74,7 @@ body {
   max-height: -moz-fit-content;
   max-height: fit-content;
   width: 100vw;
+  z-index: 0;
   /*
     <a href='https://www.freepik.com/vectors/background'>Background vector created by rawpixel.com - www.freepik.com</a>
     */
@@ -191,7 +192,7 @@ body nav.overlay {
   top: 0;
   left: 0;
   margin: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 body nav.overlay #menu-toggle {
@@ -218,7 +219,7 @@ body nav #menu.visible {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
   width: 100vw;
   height: 100vh;
   padding: 1rem;
@@ -465,7 +466,24 @@ body main #contacts #social-container li i {
   color: #3e6ff7;
 }
 
-body main #contacts .social-network-section {
+body main #contacts span {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body main #contacts span .social-network-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -488,7 +506,7 @@ body main #contacts .social-network-section {
   padding: 1rem;
 }
 
-body main #contacts .social-network-section form {
+body main #contacts span .social-network-section form {
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -504,7 +522,7 @@ body main #contacts .social-network-section form {
       justify-content: space-around;
 }
 
-body main #contacts .social-network-section form textarea {
+body main #contacts span .social-network-section form textarea {
   width: 80%;
   height: 40rem;
   margin: 1rem;
@@ -512,7 +530,7 @@ body main #contacts .social-network-section form textarea {
   resize: none;
 }
 
-body main #contacts .social-network-section form input[type=button] {
+body main #contacts span .social-network-section form input[type=button] {
   height: 100%;
   width: 80%;
   font-size: 3rem;
@@ -572,13 +590,13 @@ body main #services ul {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  z-index: -1;
 }
 
 body main #services ul li {
   background-image: url("../images/FreePikImages/2498.jpg");
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
-  opacity: 0.5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -624,6 +642,7 @@ body main #services ul li ul {
   min-height: max-content;
   margin: 0;
   padding: 0;
+  z-index: 0;
 }
 
 body main #services ul li ul li {
@@ -867,59 +886,21 @@ body footer {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  body main #contacts .col {
+  body main #contacts span {
     width: 100%;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-  }
-  body main #contacts form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    width: 100%;
-    min-height: -webkit-max-content;
-    min-height: -moz-max-content;
-    min-height: max-content;
-  }
-  body main #contacts form textarea {
-    width: 50%;
-    height: clamp(5rem, 10rem, 50rem);
-    -webkit-box-shadow: 0 0 1rem black;
-            box-shadow: 0 0 1rem black;
-    border: none;
-    margin: 2rem;
-    background-color: rgba(250, 235, 215, 0.5);
-    color: rgba(71, 71, 163, 0.466);
-    font-size: 3rem;
-    padding: 2rem;
-  }
-  body main #contacts form [type=button] {
-    min-width: 5rem;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    font-size: 4rem;
-    margin: 2rem;
-    padding: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
