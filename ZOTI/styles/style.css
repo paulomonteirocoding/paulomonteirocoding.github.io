@@ -430,6 +430,13 @@ body #site-content main .page-section {
   color: #e5dfc6;
 }
 
+body #site-content main #about p {
+  background-color: antiquewhite;
+  padding: 2rem;
+  -webkit-box-shadow: 0px 0px 1rem 1rem antiquewhite;
+          box-shadow: 0px 0px 1rem 1rem antiquewhite;
+}
+
 body #site-content main #contacts {
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
@@ -719,6 +726,14 @@ body #site-content main #products {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+body #site-content main #products p {
+  background-color: antiquewhite;
+  padding: 2rem;
+  -webkit-box-shadow: 0px 0px 1rem 1rem antiquewhite;
+          box-shadow: 0px 0px 1rem 1rem antiquewhite;
+  margin: 2rem;
 }
 
 body #site-content main #products #facebook-image-container {
