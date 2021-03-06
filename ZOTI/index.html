@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-pt">
     <head>
-
-        
         <link rel="icon" type="image/svg+xml" href="images/logo_escudo.svg">
-
         <title>Zoti - Joalharia Artesanal</title>
         <meta charset="utf-8">
         <meta author="Paulo Monteiro">
-
         <link rel="stylesheet" href="styles/style.css">
-        
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Parisienne&family=Pinyon+Script&family=Raleway&family=Tangerine:wght@400;700&display=swap&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap&family=Lovers+Quarrel" rel="stylesheet">
-        
         <script src="https://kit.fontawesome.com/6da2139e0d.js" crossorigin="anonymous"></script>
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body >
-        <body>
+    <body>
+        
+        <div id="bg-image"></div>
+        <div id="site-content">
             <header>
-                    <h1 >Zoti - Joalharia Artesanal</h1>
-                    <img src="images/logo.svg" alt="Zoti, Joalharia Artesanal" height="100px">
-                </header>
+                <h1 >Zoti - Joalharia Artesanal</h1>
+                <img src="images/logo.svg" alt="Zoti, Joalharia Artesanal" height="100px">
+            </header>
     
-                <nav id="nav">
-                    <button id="menu-toggle"> 
-                        <img src="images/logo_escudo.svg">
-                        <span>MENU</span> 
-                    </button>
-                    <ul id="menu"><li onclick="toggleMenuVisibility()" class="menu-item" id="menu-close"><i class="fa fa-times" aria-hidden="true"></i></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#" target="_self">Home</a></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#about" target="_self">Sobre</a></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#services" target="_self">Serviços</a></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#products" target="_self">Produtos</a></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#contacts" target="_self">Contactos</a></li></ul>
-                </nav>
-
-                <main>
+            <nav id="nav">
+                <button id="menu-toggle"> 
+                    <img src="images/logo_escudo.svg">
+                    <span>MENU</span> 
+                </button>
+                <ul id="menu"><li onclick="toggleMenuVisibility()" class="menu-item" id="menu-close"><i class="fa fa-times" aria-hidden="true"></i></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#" target="_self">Home</a></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#about" target="_self">Sobre</a></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#services" target="_self">Serviços</a></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#products" target="_self">Produtos</a></li><li class="menu-item" onclick="toggleMenuVisibility()"><a href="#contacts" target="_self">Contactos</a></li></ul>
+            </nav>
     
-                    <div class="cta-container">
-                            <a href="#products">Descobre os nossos produtos</a>
-                            <div class="cta-description-container">
-                                <h1>Existimos graças ao teu gosto pela história</h1>
-                                <p>Temos a cota de malha como base para muitas das coisas que fazemos, mas não nos limitamos apenas a isso!<br>Queres descobrir a maestria com que trabalhamos cada peça única?<br>Queres saber mais?</p>
-                            </div>
-    
+            <main>
+                <div class="cta-container">
+                    <a href="#products">Descobre os nossos produtos</a>
+                    <div class="cta-description-container">
+                        <h1>Existimos graças ao teu gosto pela história</h1>
+                        <p>Temos a cota de malha como base para muitas das coisas que fazemos, mas não nos limitamos apenas a isso!<br>Queres descobrir a maestria com que trabalhamos cada peça única?<br>Queres saber mais?</p>
                     </div>
-                
+                </div>
                 <section id="about" class="page-section">
                     <span>
                         <h1>Sobre</h1>
@@ -87,7 +79,7 @@
                         </li>
                     </ul>
                     <span id="social-links">
-
+    
                         <section class="tab-content social-network-section" id="whatsapp-tab-content">
                             <form id="whatsapp-message-form" method="POST">
                                 
@@ -107,11 +99,12 @@
                     
                 </section>
             </main>
-
+    
             <footer>
                 <span id="copyright-section"><p>2021 <i class="far fa-copyright fa-0.5x"></i> Mestre Zoti</p></span>
                 <span><p> Descobre aqui a nossa <a href="privacy-policy.html#privacy-policy-header" onclick="togglePrivacyPolicy()">política de privacidade</a></p></span>
             </footer>
+        </div>
     <script src="scripts/scripts.js"></script>
     </body>
 </html>

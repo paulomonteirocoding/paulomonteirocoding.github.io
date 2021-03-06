@@ -1,5 +1,7 @@
 :root {
   font-size: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -66,27 +68,56 @@ a, a:active, a:link, a:visited {
 
 body {
   position: relative;
+  z-index: 0;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body #bg-image {
+  background-image: url("../images/background_image_zoti.png");
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: scroll;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+body #site-content {
+  position: relative;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "privacy-policy" "header" "navbar" "content" "footer";
+      grid-template-areas: "header" "navbar" "content" "footer";
   min-height: 100vh;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
   width: 100vw;
-  z-index: 0;
-  /*
-    <a href='https://www.freepik.com/vectors/background'>Background vector created by rawpixel.com - www.freepik.com</a>
-    */
-  background-image: url("../images/FreePikImages/91618.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+  z-index: 2;
+  background-color: none;
 }
 
-body header {
-  -ms-grid-row: 2;
+body #site-content header {
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
   display: -webkit-box;
@@ -109,7 +140,7 @@ body header {
   background-color: rgba(229, 176, 4, 0.5);
 }
 
-body header h1 {
+body #site-content header h1 {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -130,15 +161,15 @@ body header h1 {
   font-weight: normal;
 }
 
-body header img {
+body #site-content header img {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   margin: 1rem;
 }
 
-body nav {
-  -ms-grid-row: 3;
+body #site-content nav {
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: navbar;
   padding: 1rem;
@@ -163,7 +194,7 @@ body nav {
   left: 0;
 }
 
-body nav #menu-toggle {
+body #site-content nav #menu-toggle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,33 +208,32 @@ body nav #menu-toggle {
   border: none;
 }
 
-body nav #menu-toggle img {
+body #site-content nav #menu-toggle img {
   height: 4rem;
   margin: 1rem;
 }
 
-body nav #menu-toggle span {
+body #site-content nav #menu-toggle span {
   margin-right: 1rem;
   font-weight: bold;
 }
 
-body nav.overlay {
+body #site-content nav.overlay {
   position: fixed;
   top: 0;
   left: 0;
   margin: 0;
-  z-index: 1;
 }
 
-body nav.overlay #menu-toggle {
+body #site-content nav.overlay #menu-toggle {
   display: none;
 }
 
-body nav #menu {
+body #site-content nav #menu {
   display: none;
 }
 
-body nav #menu.visible {
+body #site-content nav #menu.visible {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,18 +249,17 @@ body nav #menu.visible {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
   width: 100vw;
   height: 100vh;
   padding: 1rem;
-  background-image: url("../images/FreePikImages/91618.svg");
+  background-image: url("../images/background_image_zoti.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
 }
 
-body nav #menu.visible .menu-item {
+body #site-content nav #menu.visible .menu-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,12 +283,12 @@ body nav #menu.visible .menu-item {
   background-image: linear-gradient(-90deg, rgba(255, 145, 0, 0.5), transparent);
 }
 
-body nav #menu.visible .menu-item:nth-child(even) {
+body #site-content nav #menu.visible .menu-item:nth-child(even) {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 145, 0, 0.5)), to(transparent));
   background-image: linear-gradient(90deg, rgba(255, 145, 0, 0.5), transparent);
 }
 
-body nav #menu.visible .menu-item a, body nav #menu.visible .menu-item a:active, body nav #menu.visible .menu-item a:link, body nav #menu.visible .menu-item a:visited {
+body #site-content nav #menu.visible .menu-item a, body #site-content nav #menu.visible .menu-item a:active, body #site-content nav #menu.visible .menu-item a:link, body #site-content nav #menu.visible .menu-item a:visited {
   height: 100%;
   width: 100%;
   text-decoration: none;
@@ -282,8 +311,8 @@ body nav #menu.visible .menu-item a, body nav #menu.visible .menu-item a:active,
   font-weight: 1000;
 }
 
-body main {
-  -ms-grid-row: 4;
+body #site-content main {
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: content;
   display: -webkit-box;
@@ -306,7 +335,7 @@ body main {
   max-width: 100vw;
 }
 
-body main .cta-container {
+body #site-content main .cta-container {
   width: 100vw;
   min-height: 50vh;
   max-height: -webkit-fit-content;
@@ -327,12 +356,12 @@ body main .cta-container {
   margin: 1rem;
 }
 
-body main .cta-container * {
+body #site-content main .cta-container * {
   color: #cec7ab;
   background-color: rgba(112, 109, 63, 0.226);
 }
 
-body main .cta-container a {
+body #site-content main .cta-container a {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -365,7 +394,7 @@ body main .cta-container a {
   background-color: #706d3f;
 }
 
-body main .cta-container a:active {
+body #site-content main .cta-container a:active {
   -webkit-transform: translate(0.5rem, 0.5rem);
           transform: translate(0.5rem, 0.5rem);
   border: none;
@@ -374,11 +403,11 @@ body main .cta-container a:active {
           box-shadow: inset 0.2rem 0.2rem lightgray;
 }
 
-body main .cta-container a:hover {
+body #site-content main .cta-container a:hover {
   background-color: rgba(112, 109, 63, 0.5);
 }
 
-body main .cta-container .cta-description-container {
+body #site-content main .cta-container .cta-description-container {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -387,9 +416,11 @@ body main .cta-container .cta-description-container {
   border-radius: 1rem;
 }
 
-body main .page-section {
+body #site-content main .page-section {
   width: 100vw;
-  min-height: 100vh;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -399,7 +430,7 @@ body main .page-section {
   color: #e5dfc6;
 }
 
-body main #contacts {
+body #site-content main #contacts {
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
@@ -419,14 +450,14 @@ body main #contacts {
           justify-content: flex-start;
 }
 
-body main #contacts h1 {
+body #site-content main #contacts h1 {
   background-color: rgba(243, 177, 92, 0.3);
   color: #36281b;
   padding: 2rem;
   border-radius: 0 1.5rem 0 1.5rem;
 }
 
-body main #contacts #social-container {
+body #site-content main #contacts #social-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -444,26 +475,27 @@ body main #contacts #social-container {
       flex-wrap: wrap;
 }
 
-body main #contacts #social-container * {
+body #site-content main #contacts #social-container * {
   margin: 1rem;
 }
 
-body main #contacts #social-container li {
+body #site-content main #contacts #social-container li {
   border-radius: 0 1.5rem 0 1.5rem;
   background-color: rgba(243, 177, 92, 0.3);
+  list-style: none;
 }
 
-body main #contacts #social-container li:nth-child(even) {
+body #site-content main #contacts #social-container li:nth-child(even) {
   border-radius: 1.5rem 0 1.5rem 0;
 }
 
-body main #contacts #social-container li i {
+body #site-content main #contacts #social-container li i {
   margin: 0.5rem;
   padding: 0.5rem;
   color: #3e6ff7;
 }
 
-body main #contacts #social-container li a {
+body #site-content main #contacts #social-container li a {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -474,13 +506,13 @@ body main #contacts #social-container li a {
   padding: 0;
 }
 
-body main #contacts #social-container li a i {
+body #site-content main #contacts #social-container li a i {
   width: 100%;
   height: 100%;
   color: #3e6ff7;
 }
 
-body main #contacts span {
+body #site-content main #contacts span {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -497,7 +529,7 @@ body main #contacts span {
       justify-content: space-around;
 }
 
-body main #contacts span .social-network-section {
+body #site-content main #contacts span .social-network-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -520,7 +552,7 @@ body main #contacts span .social-network-section {
   padding: 1rem;
 }
 
-body main #contacts span .social-network-section form {
+body #site-content main #contacts span .social-network-section form {
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -536,7 +568,7 @@ body main #contacts span .social-network-section form {
       justify-content: space-around;
 }
 
-body main #contacts span .social-network-section form textarea {
+body #site-content main #contacts span .social-network-section form textarea {
   width: 80%;
   height: 40rem;
   margin: 1rem;
@@ -544,29 +576,29 @@ body main #contacts span .social-network-section form textarea {
   resize: none;
 }
 
-body main #contacts span .social-network-section form input[type=button] {
+body #site-content main #contacts span .social-network-section form input[type=button] {
   height: 100%;
   width: 80%;
   font-size: 3rem;
 }
 
-body main #contacts .tab-content {
+body #site-content main #contacts .tab-content {
   max-width: 90vw;
   margin: 1rem;
   padding: 0;
 }
 
-body main #contacts .tab-content iframe {
+body #site-content main #contacts .tab-content iframe {
   max-width: 90%;
   max-height: 90%;
 }
 
-body main #contacts #instagram-tab-content {
+body #site-content main #contacts #instagram-tab-content {
   height: 5rem;
   font-size: 3rem;
 }
 
-body main #services {
+body #site-content main #services {
   min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
@@ -587,30 +619,9 @@ body main #services {
       justify-content: space-around;
 }
 
-body main #services ul {
+body #site-content main #services ul {
   list-style: none;
   max-width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  z-index: -1;
-}
-
-body main #services ul li {
-  background-image: url("../images/FreePikImages/2498.jpg");
-  background-size: contain;
-  background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -623,7 +634,26 @@ body main #services ul li {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body #site-content main #services ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   padding: 1rem;
   margin: 0.5rem;
   height: 100%;
@@ -632,13 +662,13 @@ body main #services ul li {
   min-height: max-content;
 }
 
-body main #services ul li p {
+body #site-content main #services ul li p {
   font-size: 5rem;
   font-weight: 900;
   color: black;
 }
 
-body main #services ul li ul {
+body #site-content main #services ul li ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -656,10 +686,9 @@ body main #services ul li ul {
   min-height: max-content;
   margin: 0;
   padding: 0;
-  z-index: 0;
 }
 
-body main #services ul li ul li {
+body #site-content main #services ul li ul li {
   width: 100%;
   height: 100%;
   border: none;
@@ -667,17 +696,17 @@ body main #services ul li ul li {
   padding: 0;
 }
 
-body main #services ul li ul li p {
+body #site-content main #services ul li ul li p {
   font-size: 5rem;
   font-weight: 900;
   color: black;
 }
 
-body main #services ul li i {
+body #site-content main #services ul li i {
   color: #3d4c77;
 }
 
-body main #products {
+body #site-content main #products {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,7 +721,7 @@ body main #products {
       justify-content: space-around;
 }
 
-body main #products #facebook-image-container {
+body #site-content main #products #facebook-image-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -709,12 +738,12 @@ body main #products #facebook-image-container {
       flex-wrap: wrap;
 }
 
-body main #products #facebook-image-container iframe {
+body #site-content main #products #facebook-image-container iframe {
   margin: 1rem;
 }
 
-body footer {
-  -ms-grid-row: 5;
+body #site-content footer {
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: footer;
   display: -webkit-box;
@@ -737,7 +766,7 @@ body footer {
   padding: 0.5rem;
 }
 
-body footer span {
+body #site-content footer span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -755,7 +784,7 @@ body footer span {
   min-width: fit-content;
 }
 
-body footer span p, body footer span i, body footer span a {
+body #site-content footer span p, body #site-content footer span i, body #site-content footer span a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -777,7 +806,7 @@ body footer span p, body footer span i, body footer span a {
   max-width: max-content;
 }
 
-body footer span i {
+body #site-content footer span i {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -785,19 +814,19 @@ body footer span i {
   margin-right: 0.5rem;
 }
 
-body footer span a {
+body #site-content footer span a {
   color: goldenrod;
 }
 
-body footer span a:hover {
+body #site-content footer span a:hover {
   color: whitesmoke;
 }
 
 @media (min-width: 901px) {
-  body nav #menu-toggle {
+  body #site-content nav #menu-toggle {
     display: none;
   }
-  body nav #menu {
+  body #site-content nav #menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -813,12 +842,12 @@ body footer span a:hover {
     width: 100vw;
     height: 4.7rem;
   }
-  body nav #menu .menu-item:first-child {
+  body #site-content nav #menu .menu-item:first-child {
     width: 0px;
     height: 0px;
     display: none;
   }
-  body nav #menu .menu-item {
+  body #site-content nav #menu .menu-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -838,7 +867,7 @@ body footer span a:hover {
     list-style: none;
     height: inherit;
   }
-  body nav #menu .menu-item a, body nav #menu .menu-item a:active, body nav #menu .menu-item a:link, body nav #menu .menu-item a:visited {
+  body #site-content nav #menu .menu-item a, body #site-content nav #menu .menu-item a:active, body #site-content nav #menu .menu-item a:link, body #site-content nav #menu .menu-item a:visited {
     height: 100%;
     width: 100%;
     text-decoration: none;
@@ -860,7 +889,7 @@ body footer span a:hover {
     color: white;
     font-weight: 1000;
   }
-  body main .cta-container {
+  body #site-content main .cta-container {
     min-width: 100%;
     min-height: 50vh;
     max-height: -webkit-fit-content;
@@ -885,7 +914,7 @@ body footer span a:hover {
         flex-wrap: wrap;
     margin: 1rem;
   }
-  body main .cta-container a {
+  body #site-content main .cta-container a {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -901,7 +930,7 @@ body footer span a:hover {
     border-left: 0;
     padding: 0.5rem;
   }
-  body main .cta-container a:active {
+  body #site-content main .cta-container a:active {
     -webkit-transform: translate(0.5rem, 0.5rem);
             transform: translate(0.5rem, 0.5rem);
     border: none;
@@ -909,18 +938,20 @@ body footer span a:hover {
     -webkit-box-shadow: inset 0.2rem 0.2rem lightgray;
             box-shadow: inset 0.2rem 0.2rem lightgray;
   }
-  body main .cta-container a:focus {
+  body #site-content main .cta-container a:focus {
     outline: none;
   }
-  body main .cta-container .cta-description-container {
+  body #site-content main .cta-container .cta-description-container {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
     max-width: 50%;
   }
-  body main .page-section {
+  body #site-content main .page-section {
     width: 100vw;
-    min-height: 100vh;
+    min-height: -webkit-max-content;
+    min-height: -moz-max-content;
+    min-height: max-content;
     background: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -939,7 +970,7 @@ body footer span a:hover {
         flex-wrap: wrap;
     padding: 5rem;
   }
-  body main #contacts {
+  body #site-content main #contacts {
     min-height: 25vh;
     max-height: -webkit-fit-content;
     max-height: -moz-fit-content;
@@ -962,7 +993,7 @@ body footer span a:hover {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  body main #contacts span {
+  body #site-content main #contacts span {
     width: 100%;
     height: 100%;
     display: -webkit-box;
@@ -978,8 +1009,15 @@ body footer span a:hover {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  body footer {
-    -ms-grid-row: 5;
+  body #site-content main #services ul {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body #site-content footer {
+    -ms-grid-row: 4;
     -ms-grid-column: 1;
     grid-area: footer;
     display: -webkit-box;
@@ -998,7 +1036,7 @@ body footer span a:hover {
     background-image: linear-gradient(transparent, #131349);
     padding: 0.5rem;
   }
-  body footer span {
+  body #site-content footer span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1015,7 +1053,7 @@ body footer span a:hover {
     min-width: -moz-fit-content;
     min-width: fit-content;
   }
-  body footer span p, body footer span i, body footer span a {
+  body #site-content footer span p, body #site-content footer span i, body #site-content footer span a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1036,17 +1074,17 @@ body footer span a:hover {
     max-width: -moz-max-content;
     max-width: max-content;
   }
-  body footer span i {
+  body #site-content footer span i {
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
-  body footer span a {
+  body #site-content footer span a {
     color: goldenrod;
   }
-  body footer span a:hover {
+  body #site-content footer span a:hover {
     color: whitesmoke;
   }
 }
