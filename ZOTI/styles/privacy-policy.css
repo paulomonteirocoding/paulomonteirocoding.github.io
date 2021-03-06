@@ -1,0 +1,164 @@
+:root {
+  font-size: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html ::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Tangerine", cursive;
+  background: none;
+  color: #36281b;
+}
+
+*:focus {
+  outline: none;
+}
+
+h1 {
+  font-family: "Parisienne", cursive;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: "Parisienne", cursive;
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: "Parisienne", cursive;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 3.5rem;
+}
+
+a, a:active, a:link, a:visited {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+body #privacy-policy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("../images/FreePikImages/91618.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  padding: 1rem;
+}
+
+body #privacy-policy span {
+  width: 90%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-image: url("../images/logo_escudo.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body #privacy-policy span h1 {
+  color: whitesmoke;
+  padding: 1rem;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+body #privacy-policy span p {
+  background-color: rgba(245, 245, 245, 0.75);
+  color: blue;
+  padding: 1rem;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+body #privacy-policy span a {
+  background-color: whitesmoke;
+  color: blue;
+  padding: 1rem;
+  max-height: 5rem;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  font-size: 3rem;
+  margin: 3rem;
+  border-radius: 1.5rem;
+}
+/*# sourceMappingURL=privacy-policy.css.map */
