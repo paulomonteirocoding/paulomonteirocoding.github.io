@@ -361,7 +361,22 @@ body{
 
 
                     i{
+                        margin: 0.5rem;
+                        padding: 0.5rem;
                         color: rgb(62, 111, 247);
+                    }
+
+                    a{
+                        max-width: fit-content;
+                        max-height: fit-content;
+                        margin: 0;
+                        padding: 0;
+                        i{
+                                
+                            width: 100%;
+                            height: 100%;
+                            color: rgb(62, 111, 247);
+                        }
                     }
                     
                     
@@ -538,6 +553,99 @@ body{
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+
+        background-image:linear-gradient(  transparent,rgb(19, 19, 73));
+
+        padding: 0.5rem;
+
+        span{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            min-width: fit-content;
+            p,i,a{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                font-size: 4rem;
+                padding: 0.5rem;
+                color: whitesmoke;
+                width: 100%;
+                max-width: max-content;
+            }
+            i{
+                max-width: fit-content;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+            a{
+                color: goldenrod;
+            }
+            a:hover{
+                
+                color: whitesmoke;
+            }
+
+        }
+    }
+
+    #privacy-policy{
+
+        &.hidden{
+            display: none;
+        }
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2;
+        background-image: url('../images/FreePikImages/91618.svg');
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+
+        span{
+            width: 90%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            h1{
+                background-color: blue;
+                color: whitesmoke;
+                padding: 1rem;
+                max-height: fit-content;
+                max-width: fit-content;
+            }
+
+            p{
+                background-color: whitesmoke;
+                color: blue;
+                padding: 1rem;
+                max-height: fit-content;
+                max-width: fit-content;
+            }
+
+            a{
+                background-color: whitesmoke;
+                color: blue;
+                padding: 1rem;
+                max-height: 5rem;
+                max-width: fit-content;
+                font-size: 3rem;
+            }
+        }
     }
     
 }

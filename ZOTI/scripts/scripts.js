@@ -34,3 +34,7 @@ function setiframesize(){
         }
     }
 }
+
+function togglePrivacyPolicy(){
+    document.getElementById('privacy-policy').classList.toggle('hidden');
+}
