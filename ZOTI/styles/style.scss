@@ -1,5 +1,5 @@
 $text-color:#36281b;
-$menu-item-color:rgba(255, 145, 0, 0.5);
+$menu-item-color:rgba(253, 205, 101, 0.5);
 
 $headings-font:'Parisienne', cursive;
 $general-text-font:'Tangerine', cursive;
@@ -231,17 +231,8 @@ body{
                     min-width: max-content ;
                     list-style: none;
                     height: 10vh;
-    
-                                
-    
-                    position: relative;
-    
-                    background-image: linear-gradient(-90deg, $menu-item-color, transparent);
-    
-                    &:nth-child(even){
-                        background-image: linear-gradient(90deg, $menu-item-color, transparent);                
-                    }
-    
+                    background-image: linear-gradient(90deg,transparent,transparent, $menu-item-color, $menu-item-color, $menu-item-color, transparent,transparent);
+                    
                     a, a:active, a:link, a:visited{
                         height: 100%;
                         width: 100%;
@@ -433,8 +424,14 @@ body{
                         justify-content: space-around;
                         min-height: max-content;
                         width: 100%;
+                        max-width: 90vw;
+                        margin: 1rem;
+                        padding:0;
+
+                        margin: 1.5rem;
     
                         background-image: linear-gradient( to top, darkgray, gray, lightgray, darkgray,lightgray, gray, darkgray);
+                        box-shadow: 0px 0px 0.5rem 0.5rem gray;
                         margin:1rem;
                         padding:1rem;
                         form{
@@ -461,19 +458,6 @@ body{
     
                     }
                 }
-    
-                .tab-content{
-                    max-width: 90vw;
-                    margin: 1rem;
-                    padding:0;
-    
-                    iframe{
-                        max-width: 90%;
-                        max-height: 90%;
-                    }
-    
-                }
-    
                 #instagram-tab-content{
                     height: 5rem;
                     font-size: 3rem;
