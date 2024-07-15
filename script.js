@@ -33,11 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const message = `Nome: ${document.querySelector('input#name').value}
 Email: ${document.querySelector('input#email').value}
 Assunto: ${document.querySelector('input#subject').value}
-Mensagem: \n\n ${document.querySelector('textarea#message').value}`;
+Mensagem:\n${document.querySelector('textarea#message').value}`;
                 const encodedMessage = encodeURIComponent(message);
                 const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
                 window.open(url, '_blank').focus()
-                //window.location.href = url;
                 document.getElementById('overlay').style.display = 'none';
                 document.querySelector('input#name').value = '';
                 document.querySelector('input#email').value = '';
@@ -81,6 +80,8 @@ function populateTable(data) {
                     td.innerHTML = '<i class="fas fa-times"></i>';
                 } else if (headers[j] === 'Observações') {
                     td.innerHTML = formatObservacoes(cellData);
+                } else if (headers[j] === 'Valor') {
+                    td.innerHTML = cellData + '€';
                 } else {
                     td.textContent = cellData;
                 }
@@ -130,6 +131,7 @@ function showOverlay(subject) {
     document.getElementById('subject').value = subject;
     document.getElementById('overlay').style.display = 'flex';
 }
+
 function handleOverlayClose() {
     document.getElementById('overlay').style.display = 'none';
 }
