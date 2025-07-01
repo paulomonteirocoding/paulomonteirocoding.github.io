@@ -2,11 +2,78 @@ html, body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: auto;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+:visited {
+    text-decoration: none;
+    color: black;
 }
 
 header{
-    height: 250px;
     display: flex;
     flex-direction: column;
-
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
+
+.brand-icon {
+    align-self: baseline;
+    padding: 5px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 0 0;
+    width: 100%;
+}
+
+nav a, .socials a{
+    margin-left: 10px;
+    padding: 5px;
+    min-width: 50px;
+    text-align: center;
+}
+
+nav a:hover, .socials a:hover {
+    background-image: linear-gradient(to top, rgba(128, 0, 128, 0.25), rgba(255, 182, 193, 0.5));
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    border-left: 5px solid black;
+}
+
+.socials div:first-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
