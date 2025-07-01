@@ -77,3 +77,18 @@ footer {
     align-items: center;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+form textarea{
+    height: 400px;
+    width: 50%;
+    max-width: 500px;
+    min-width: 300px;
+
+}

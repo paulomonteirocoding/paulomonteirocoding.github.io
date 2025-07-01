@@ -18,7 +18,17 @@
         </nav>
     </header>
     <main>
-        <p>coisas!!!</p>
+        <form onsubmit="submitContactForm(); return false;">
+            <label for="fname">Nome</label>
+            <input type="text" name="fname" required>
+            <label for="lname">Sobrenome</label>
+            <input type="text" name="lname">
+            <label for="email">Email</label>
+            <input type="email" name="lname" required>
+            <label for="message"></label>
+            <textarea name="message" placeholder="A sua mensagem aqui"></textarea>
+            <button type="button" onclick="myFunction()">Enviar</button>
+        </form>
     </main>
     <footer>
         <div>
