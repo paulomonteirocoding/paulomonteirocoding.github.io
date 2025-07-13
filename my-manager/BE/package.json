@@ -1,0 +1,32 @@
+{
+  "name": "my-first-secure-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "debug": "nodemon --inspect index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "5.1.1",
+    "dotenv": "16.4.7",
+    "express": "5.1.0",
+    "jsonwebtoken": "9.0.2",
+    "lodash": "4.17.21",
+    "mysql2": "3.14.0",
+    "sequelize": "6.37.7",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.26.0",
+    "@types/express": "5.0.1",
+    "@types/jsonwebtoken": "9.0.9",
+    "eslint": "9.26.0",
+    "globals": "^16.0.0",
+    "nodemon": "3.1.9"
+  }
+}

@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding:0;
+}
+
+main {
+  box-sizing: border-box !important;
+}
+
+app-root {
+  display: block; /* or flex/grid if needed */
+  height: 100%;
+}
+
+app-root main{
+  max-width: 100%;
+}
