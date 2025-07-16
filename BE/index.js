@@ -3,10 +3,15 @@ require('dotenv').config();
 
 const process = require('process');
 
+const cors = require('cors');
+
 //Brings express.js to the application
 const express = require('express');
 const server = express();
-~
+
+// Enables Cross-Origin Resource Sharing (CORS)
+server.use(cors());
+
 //Enables express.js to use JSON for the responses
 server.use(express.json());
 
@@ -15,6 +20,8 @@ server.use((req, res, next) => {
   res.type('application/json');
   next();
 });
+
+
 
 //Calls and initializes a sequelize instance to handle database communication
 const sequelize = require('./config/database'); // instância Sequelize

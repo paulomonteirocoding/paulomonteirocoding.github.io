@@ -1,5 +1,6 @@
 <div class="container">
   <nav class="col-10">
     <a routerLink="/">Home</a>
+    <a *ngIf="!isLoggedIn" routerLink="/login">Login</a>
   </nav>
 </div>

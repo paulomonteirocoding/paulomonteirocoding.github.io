@@ -11,15 +11,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login-component/login-component';
 import {
   provideHttpClient,
-  withInterceptorsFromDi,
+  withFetch,
+  withInterceptors,
 } from '@angular/common/http';
+import { authInterceptor } from './auth-interceptor';
 
 @NgModule({
   declarations: [App, Header, Footer, HomeComponent, LoginComponent],
   imports: [BrowserModule, AppRoutingModule, NgbModule, ReactiveFormsModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideHttpClient(withInterceptorsFromDi()),
+    provideHttpClient(withInterceptors([authInterceptor]), withFetch()),
   ],
   bootstrap: [App],
 })
